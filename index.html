@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Volleyball</title>
+    <style>
+      body {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(254, 255, 165) 0%,
+          rgb(255, 232, 182) 90%
+        );
+      }
+
+      .content {
+        max-width: 1000px;
+        margin: 20px auto;
+        background: #c6deff;
+        border-radius: 30px;
+        padding: 20px;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        font-size: 18px;
+        border: 0;
+        border-radius: 30px;
+        padding: 15px;
+        background: #57a0ee;
+        color: white;
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background: white;
+        color: #57a0ee;
+        border: 2px solid #57a0ee;
+      }
+
+      .theme-button {
+        background-color: #1a304d;
+        position: relative;
+        top: 20px;
+        left: 420px;
+        font-size: 14px;
+      }
+
+      .theme-button:hover {
+        background: white;
+        color: #1a304d;
+        border: 2px solid #1a304d;
+        cursor: pointer;
+      }
+
+      h1 {
+        font-size: 80px;
+        margin: 20px;
+      }
+
+      h2 {
+        font-size: 40px;
+        margin-top: 10px;
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+        font-weight: 700;
+      }
+
+      img {
+        max-width: 100%;
+        border-radius: 24px;
+      }
+
+      .volleyball-main-picture {
+        transition: all 200ms ease-in-out;
+      }
+
+      .volleyball-main-picture:hover {
+        transform: scale(1.1);
+        filter: grayscale(90%);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+
+      .grid img {
+        width: 100%;
+        transition: all 150ms ease-in-out;
+        margin-top: 15px;
+      }
+
+      .grid img:hover {
+        margin: 15px 0;
+        transform: scale(1.5);
+      }
+
+      p {
+        margin: 30px;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      footer {
+        text-align: center;
+        padding: 30px;
+      }
+
+      .dark-theme {
+        background: linear-gradient(
+          112.1deg,
+          rgb(32, 38, 57) 11.4%,
+          rgb(63, 76, 119) 70.2%
+        );
+        color: white;
+      }
+
+      .dark-theme .content {
+        background: #1a304d;
+      }
+
+      .dark-theme .theme-button {
+        background: white;
+        color: #1a304d;
+      }
+
+      .dark-theme a {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <button class="theme-button">Change Theme</button>
+      <h1>I ❤️ Volleyball 🏐</h1>
+      <h2>My favourite sports</h2>
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/065/411/original/chandan-chaurasia-tAcoHIvCtwM-unsplash.jpg?1675285061"
+        alt="ball"
+        class="volleyball-main-picture"
+      />
+
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/065/414/original/raja-tilkian-tnUcI53e7zA-unsplash.jpg?1675285256"
+          alt=""
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/065/413/original/vince-fleming-aZVpxRydiJk-unsplash.jpg?1675285226"
+          alt=""
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/065/412/original/erik-mclean--PkEytgjLm0-unsplash.jpg?1675285089"
+          alt=""
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/065/703/original/elizeu-dias--Vae5P6v-aI-unsplash.jpg?1675458882"
+          alt=""
+        />
+      </div>
+      <p>
+        Volleyball is a team sport in which two teams of six players are
+        separated by a net. Each team tries to score points by grounding a ball
+        on the other team's court under organized rules. It has been a part of
+        the official program of the Summer Olympic Games since Tokyo 1964. Beach
+        volleyball was introduced to the programme at the Atlanta 1996 Summer
+        Olympics.
+        <a href="https://de.wikipedia.org/wiki/Volleyball" target="_blank">
+          Learn more on Wikipedia</a
+        >
+      </p>
+
+      <footer>
+        Coded with ❤️ by
+        <a href="https://www.shecodes.io/graduates/64846-alena-causov"
+          >Alena Causov</a
+        >
+      </footer>
+    </div>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        if (body.classList.contains("dark-theme")) {
+          body.classList.remove("dark-theme");
+        } else {
+          body.classList.add("dark-theme");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
